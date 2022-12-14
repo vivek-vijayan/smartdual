@@ -1,0 +1,129 @@
+/*!*****************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/popup.css ***!
+  \*****************************************************************/
+.body {
+  background-color: #dbe5e9;
+  width: 400px;
+  height: 600px;
+  margin: 0px !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.html {
+  border-radius: 20px;
+  user-select: none;
+}
+
+.title-area {
+  padding: 10px 10px 10px 15px;
+  flex-direction: row;
+  position: relative;
+  align-items: baseline;
+  border-bottom: rgb(228, 228, 228) solid 2px;
+  background-color: #f2f2f2;
+}
+
+.title-area span {
+  font-size: 15px;
+  vertical-align: super;
+  color: rgb(70, 70, 70);
+  font-weight: normal;
+  padding-left: 10px;
+}
+
+.status {
+  background-color: #51b04e;
+  color: white;
+  text-align: center;
+}
+.tab-info-area {
+  padding: 20px;
+  background-color: #fbfbfb;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-bottom: rgb(228, 228, 228) solid 1px;
+  height: 40px;
+}
+
+.current-tab-info {
+  background-color: #51b04e;
+  margin-left: 20px;
+  text-align: center;
+  color: white;
+  padding: 2px;
+  font-size: 10px;
+  width: 100px;
+  border-radius: 20px;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  vertical-align: text-bottom;
+}
+
+#current-tab-name {
+  overflow: hidden;
+  width: 200px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 13px;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.copy-button {
+  padding-top: 5px;
+  text-align: center;
+  border: #25bc2000 solid 1px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  height: 30px;
+  width: 100px;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+}
+
+.copy-button:hover {
+  border: #51b04ee3 solid 1px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+}
+
+.activation-area {
+  margin: 30px;
+}
+
+.activate {
+  background-color: #51b04e;
+  border-radius: 20px;
+  border: none;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+  padding: 10px;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.activate:hover {
+  background-color: #3a9737;
+  border-radius: 20px;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+}
+
+/* TEST */
+
+
+.mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+}
+
+.mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196f3;
+  color: #fff;
+}

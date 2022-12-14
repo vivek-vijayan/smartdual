@@ -1,21 +1,19 @@
-'use strict';
+// A function to use as callback
+function doStuffWithDom(domContent) {
+  console.log('I received the following DOM content:\n' + domContent);
+}
 
-// With background scripts you can communicate with popup
-// and contentScript files.
-// For more information on background script,
-// See https://developer.chrome.com/extensions/background_pages
+// When the browser-action button is clicked...
+chrome.browserAction.onClicked.addListener(function (tab) {
+  // ...check the URL of the active tab against our pattern and...
 
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.type === 'GREETINGS') {
-    const message = `Hi ${
-      sender.tab ? 'Con' : 'Pop'
-    }, my name is Bac. I am from Background. It's great to hear from you.`;
+  // ...if it matches, send a message specifying a callback too
+  chrome.tabs.sendMessage(tab.id, { text: 'report_back' }, doStuffWithDom);
+});
 
-    // Log message coming from the `request` parameter
-    console.log(request.payload.message);
-    // Send a response message
-    sendResponse({
-      message,
-    });
-  }
+chrome.action.onClicked.addListener((tab) => {
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    files: ['contentScript.js'],
+  });
 });

@@ -1,3 +1,8 @@
+/******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!**********************!*\
+  !*** ./src/popup.js ***!
+  \**********************/
 /* Getting the URL of the current page  */
 
 var newURL;
@@ -28,3 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
     run();
   });
 });
+
+/******/ })()
+;
+//# sourceMappingURL=popup.js.map

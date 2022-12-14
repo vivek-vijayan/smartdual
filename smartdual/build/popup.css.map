@@ -1,0 +1,1 @@
+{"version":3,"file":"popup.css","mappings":";;;AAAA;EACE,2BAA2B;EAC3B,YAAY;EACZ,aAAa;AACf;;AAEA;EACE;AACF","sources":["webpack://smartdual/./src/popup.css"],"sourcesContent":["body {\n  background-color: aliceblue;\n  width: 200px;\n  height: 300px;\n}\n\n.title-area {\n  color:aqua\n}\n\n"],"names":[],"sourceRoot":""}
