@@ -1,12 +1,15 @@
-document.body.style.backgroundColor = 'white';
-
 var outerwindow = document.createElement('div');
 var outerScreen = document.createElement('div');
 outerwindow.setAttribute('id', 'outerwindow');
-outerwindow.classList.add('mydiv');
+outerwindow.classList.add('smartdual-secondary-window');
 outerScreen.setAttribute('id', 'outerscreen');
-outerScreen.classList.add('mydivheader');
-outerScreen.innerHTML = ' welcome to wutomation';
+outerScreen.classList.add('smartdual-secondary-windowheader');
+outerScreen.innerHTML = '📺 Remote Window';
+
+dualwindow = document.createElement('iframe');
+dualwindow.setAttribute('src', 'https://www.google.co.in/');
+dualwindow.classList.add('smartdual-dualwindowscreen');
+outerScreen.append(dualwindow);
 
 outerwindow.append(outerScreen);
 document.getElementsByTagName('body')[0].append(outerwindow);
@@ -19,9 +22,9 @@ function dragElement(elmnt) {
     pos2 = 0,
     pos3 = 0,
     pos4 = 0;
-  if (document.getElementById("outerscreen")) {
+  if (document.getElementById('outerscreen')) {
     /* if present, the header is where you move the DIV from:*/
-    document.getElementById("outerscreen").onmousedown = dragMouseDown;
+    document.getElementById('outerscreen').onmousedown = dragMouseDown;
   } else {
     /* otherwise, move the DIV from anywhere inside the DIV:*/
     elmnt.onmousedown = dragMouseDown;

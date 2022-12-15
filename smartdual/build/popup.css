@@ -1,7 +1,7 @@
 /*!*****************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/popup.css ***!
   \*****************************************************************/
-.body {
+.smartdual-body {
   background-color: #dbe5e9;
   width: 400px;
   height: 600px;
@@ -9,12 +9,12 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.html {
+.smartdual-html {
   border-radius: 20px;
   user-select: none;
 }
 
-.title-area {
+.smartdual-title-area {
   padding: 10px 10px 10px 15px;
   flex-direction: row;
   position: relative;
@@ -23,7 +23,7 @@
   background-color: #f2f2f2;
 }
 
-.title-area span {
+.smartdual-title-area span {
   font-size: 15px;
   vertical-align: super;
   color: rgb(70, 70, 70);
@@ -31,12 +31,12 @@
   padding-left: 10px;
 }
 
-.status {
+.smartdual-status {
   background-color: #51b04e;
   color: white;
   text-align: center;
 }
-.tab-info-area {
+.smartdual-tab-info-area {
   padding: 20px;
   background-color: #fbfbfb;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -44,24 +44,24 @@
   height: 40px;
 }
 
-.current-tab-info {
+.smartdual-current-tab-info {
   background-color: #51b04e;
   margin-left: 20px;
   text-align: center;
-  color: white;
+  color: rgb(12, 12, 12);
   padding: 2px;
   font-size: 10px;
   width: 100px;
   border-radius: 20px;
 }
 
-.title {
+.smartdual-title {
   display: flex;
   flex-direction: row;
   vertical-align: text-bottom;
 }
 
-#current-tab-name {
+.smartdual-current-tab-name {
   overflow: hidden;
   width: 200px;
   white-space: nowrap;
@@ -69,31 +69,35 @@
   font-size: 13px;
   padding: 10px;
   padding-left: 20px;
+  display: block;
 }
 
-.copy-button {
-  padding-top: 5px;
+.smartdual-copy-button {
+  margin-top: 5px;
+  padding: 5px;
+  position: absolute;
+  right: 20px;
   text-align: center;
   border: #25bc2000 solid 1px;
   border-radius: 5px;
   background-color: #f2f2f2;
-  height: 30px;
+  height: 20px;
   width: 100px;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
 }
 
-.copy-button:hover {
+.smartdual-copy-button:hover {
   border: #51b04ee3 solid 1px;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
 }
 
-.activation-area {
+.smartdual-activation-area {
   margin: 30px;
 }
 
-.activate {
+.smartdual-activate {
   background-color: #51b04e;
   border-radius: 20px;
   border: none;
@@ -103,7 +107,7 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.activate:hover {
+.smartdual-activate:hover {
   background-color: #3a9737;
   border-radius: 20px;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
@@ -112,18 +116,28 @@
 /* TEST */
 
 
-.mydiv {
+.smartdual-secondary-window {
   position: absolute;
-  z-index: 9;
+  z-index: 999 !important;
   background-color: #f1f1f1;
   text-align: center;
   border: 1px solid #d3d3d3;
+  border-radius: 20px !important;
 }
 
-.mydivheader {
+.smartdual-secondary-windowheader {
   padding: 10px;
   cursor: move;
-  z-index: 10;
-  background-color: #2196f3;
+  z-index: 9999 !important;
+  background-color: #262626;
+  width: 200px !important;
+  height: 22px !important;
+  border-radius: 5px !important;
   color: #fff;
+  font-size: 13px !important;
+}
+
+.smartdual-dualwindowscreen {
+  width: 300px !important;
+  height: 500px !important;
 }
