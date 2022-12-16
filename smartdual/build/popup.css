@@ -1,6 +1,7 @@
 /*!*****************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/popup.css ***!
   \*****************************************************************/
+
 .smartdual-body {
   background-color: #dbe5e9;
   width: 400px;
@@ -59,11 +60,13 @@
   display: flex;
   flex-direction: row;
   vertical-align: text-bottom;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .smartdual-current-tab-name {
   overflow: hidden;
-  width: 200px;
+  width: 50px !important;
   white-space: nowrap;
   text-overflow: ellipsis;
   font-size: 13px;
@@ -115,29 +118,35 @@
 
 /* TEST */
 
-
 .smartdual-secondary-window {
+  user-select: none;
+  border: red solid 1px !important;
   position: absolute;
   z-index: 999 !important;
-  background-color: #f1f1f1;
+  background-color: #0a0a0a00;
   text-align: center;
-  border: 1px solid #d3d3d3;
-  border-radius: 20px !important;
 }
 
 .smartdual-secondary-windowheader {
   padding: 10px;
+  position: relative;
   cursor: move;
   z-index: 9999 !important;
-  background-color: #262626;
-  width: 200px !important;
-  height: 22px !important;
-  border-radius: 5px !important;
+  margin: 0px !important;
+  background-color: #303444;
+  width: 800px !important;
+  height: 10px !important;
+  border-radius: 1px !important;
   color: #fff;
   font-size: 13px !important;
 }
 
 .smartdual-dualwindowscreen {
-  width: 300px !important;
+  width: 800px !important;
   height: 500px !important;
+}
+
+.smartdual-windowframe {
+  border: #303444 solid 10px;
+  overflow: scroll;
 }
